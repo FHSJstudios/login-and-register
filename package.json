@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node src/test/testDBConnection.js"
+    "test": "node src/test/testDBConnection.js",
+    "start": "node --watch index.js",
+    "generateRandomBytes": "node src/token/generateRandomBytes.js"
   },
   "keywords": [],
   "author": "",
@@ -31,5 +33,10 @@
     "ip": "^2.0.1",
     "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "bcrypt"
+    ]
   }
 }
