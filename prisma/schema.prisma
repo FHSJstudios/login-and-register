@@ -22,8 +22,6 @@ model User {
 }
 
 model Bcrypt {
-  id        String   @id @default(cuid())
-  password  String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id         String @id
+  saltRounds Int
 }

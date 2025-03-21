@@ -12,9 +12,7 @@ CREATE TABLE "User" (
 -- CreateTable
 CREATE TABLE "Bcrypt" (
     "id" TEXT NOT NULL,
-    "password" TEXT NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "saltRounds" INTEGER NOT NULL,
 
     CONSTRAINT "Bcrypt_pkey" PRIMARY KEY ("id")
 );
